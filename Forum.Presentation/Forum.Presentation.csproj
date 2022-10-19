@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Forum.Application\Forum.Application.csproj" />
-    <ProjectReference Include="..\Forum.Contracts\Forum.Contracts.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
