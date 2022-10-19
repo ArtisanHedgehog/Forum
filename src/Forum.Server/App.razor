@@ -1,4 +1,14 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@code{
+    public List<System.Reflection.Assembly> _additionalAssemblies =
+        new List<System.Reflection.Assembly>
+        {
+            typeof(Forum.Presentation.AssemblyReference).Assembly
+        };
+}
+
+<Router
+    AppAssembly="@typeof(App).Assembly"
+    AdditionalAssemblies="@_additionalAssemblies">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
